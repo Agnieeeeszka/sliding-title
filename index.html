@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=section, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        color: white;
+        font-family: arial;
+        font-size: 60px;
+        position: relative;
+      }
+
+      .s1 {
+        background-color: darkcyan;
+      }
+
+      .s2 {
+        background-color: royalblue;
+      }
+
+      section div {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        border: 5px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+        section h1 {
+            position: absolute;
+            top: 40%;
+
+        }
+
+      .s1 h1 {
+        left: -200%;
+        transition: 2s ease;
+        /* ease: zaczynaj przyspieszaj zwalniaj
+        linear: stala predkosc
+        domyslnie jest  ease all wszystkie wlasciwosci */
+      }
+
+      /* jesli najedziemy na diva ma wyjechac h1, plus odnosi sie do brata */
+      .s1 div:hover+h1 {
+        left: 10%;
+      }
+
+      .s2 h1 {
+        left: 10%;
+        opacity: 0;
+        transition: 1s;
+      }
+      
+      .s2 div:hover h1 {
+        opacity: 1;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section class="s1">
+      <div></div>
+      <h1>TYTUŁ PIERWSZY</h1>
+    </section>
+    <section class="s2">
+      <div></div>
+      <h1>TYTUŁ DRUGI</h1>
+    </section>
+  </body>
+</html>
